@@ -19,15 +19,17 @@ export default function Home(props: HomeProps) {
     event.preventDefault();
 
     try {
-      const response = await api.post("/pools/", {
+      const response = await api.post("/pools", {
         title: poolTitle,
       });
 
-      const { code } = response.data;
+      const { code } = response.data
 
       await navigator.clipboard.writeText(code)
       
       alert('Bolão criado com sucesso, o código foi copiado para a área de tranferência.');
+      
+      setPoolTitle('')
     } catch (err) {
       console.error(err);
       alert("falha ao tentar criar o bolão, tente novamente!");
@@ -57,7 +59,7 @@ export default function Home(props: HomeProps) {
               type="text"
               required
               placeholder="Qual nome do seu bolão?"
-              onChange={(event) => setPoolTitle(event.target.value)}
+              onChange={event => setPoolTitle(event.target.value)}
               value={poolTitle}
             />
             <button
