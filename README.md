@@ -69,6 +69,7 @@ $ npm run dev
 ## :memo: Licença ##
 
 Feito por <a href="https://github.com/PauloHBLima" target="_blank">Paulo H B Lima</a> 🇧🇷
+##
 Link do figma: https://www.figma.com/community/file/1169028343875283461
 
 &#xa0;
